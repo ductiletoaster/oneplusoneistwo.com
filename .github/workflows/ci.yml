@@ -30,3 +30,7 @@ jobs:
       - name: Building Application
         working-directory: site
         run: yarn run build
+      
+      - name: Export Application
+        working-directory: site
+        run: yarn run export
