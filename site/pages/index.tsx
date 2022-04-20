@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         }}
       >
         <Typography variant="h4" component="h1" gutterBottom>
-          MUI v5 + Next.js with TypeScript example
+          Welcome to our Wedding Site!
         </Typography>
         <Link href="/about" color="secondary">
           Go to the about page
