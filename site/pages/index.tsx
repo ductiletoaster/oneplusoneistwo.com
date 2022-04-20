@@ -37,7 +37,8 @@ const Home: NextPage = () => {
           </Grid>
           <Grid item xs={6}>
             <TextField id="password" label="Password" variant="outlined" fullWidth onKeyUpCapture={(e) => {
-              if (e.target?.value === "woot") {
+              // @ts-ignore -- @todo handle this the right way
+              if (e.currentTarget?.value === "woot") {
                 window.location.href = '/details'
               }
             }} />
