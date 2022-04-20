@@ -27,7 +27,7 @@ const Details: NextPage = () => {
 
           <Grid item>
             <Typography variant="subtitle1" component="h2" gutterBottom>
-              WE CAN'T WAIT FOR YOU TO JOIN US ON OUR WEDDING DAY!
+              WE CAN&apos;T WAIT FOR YOU TO JOIN US ON OUR WEDDING DAY!
               <br />
               HERE ARE SOME TIPS TO HELP YOU MAKE THE MOST OF IT:
             </Typography>
