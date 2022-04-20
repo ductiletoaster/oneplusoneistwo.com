@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -t -d out",
     "dev": "next dev",
     "export": "next export",
+    "postexport": "cp .nojekyll ./out/.nojekyll && cp CNAME ./out/CNAME",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
