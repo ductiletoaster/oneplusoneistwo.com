@@ -2,8 +2,17 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
+
+//https://codepen.io/FlyC/pen/LEVbKP
+// https://www.noisetexturegenerator.com/
 const theme = createTheme({
   palette: {
+    background: { 
+      default: '#ffffff' 
+    },
+    text: {
+      primary: "#111111"
+    },
     primary: {
       main: '#556cd6',
     },

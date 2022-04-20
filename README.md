@@ -2,8 +2,6 @@
 Our Wedding Site!
 
 ## TODOs
-[] Install UI framework
-[] https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
-[] Github pages deployment
+[] Flatten structure and eliminate site folder
 [] Automatic deployments on releasing / tagging
 [] CNAME setup
