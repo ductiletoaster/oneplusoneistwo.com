@@ -15,10 +15,11 @@ const Details: NextPage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          padding: "100px",
+          minHeight: "750px",
           backgroundImage: "url(/centerpiece.svg)",  
-          backgroundPosition: "10",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
+          backgroundSize: "100%",
         }}
       >
         <Grid container spacing={2.5} alignContent="center" alignItems="center" justifyContent="center" textAlign="center">
@@ -54,8 +55,8 @@ const Details: NextPage = () => {
         width: "100%",
         height: "400px",
         backgroundImage: "url(/nature-scape.svg)",
-        backgroundPosition: "right bottom",
-        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left bottom",
+        backgroundRepeat: "repeat-x",
         backgroundSize: "contain",
         position: "fixed",
         bottom: 0,
