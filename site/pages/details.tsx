@@ -2,7 +2,6 @@ import * as React from 'react';
 import type { NextPage } from 'next';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
@@ -16,6 +15,10 @@ const Details: NextPage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          backgroundImage: "url(/centerpiece.svg)",  
+          backgroundPosition: "10",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
         }}
       >
         <Grid container spacing={2.5} alignContent="center" alignItems="center" justifyContent="center" textAlign="center">
@@ -47,6 +50,17 @@ const Details: NextPage = () => {
         </Grid>
 
       </Box>
+      <Box style={{
+        width: "100%",
+        height: "400px",
+        backgroundImage: "url(/nature-scape.svg)",
+        backgroundPosition: "right bottom",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+        position: "fixed",
+        bottom: 0,
+        left: 0
+      }}/>
     </Container>
   );
 };

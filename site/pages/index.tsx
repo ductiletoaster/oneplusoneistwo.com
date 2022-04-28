@@ -1,55 +1,43 @@
+
+   
 import * as React from 'react';
 import type { NextPage } from 'next';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import Copyright from '../src/Copyright';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
-const Home: NextPage = () => {
+const Details: NextPage = () => {
   return (
-    <Container maxWidth="sm">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Grid container spacing={2.5} alignContent="center" alignItems="center" justifyContent="center" textAlign="center">
-          <Grid item xs={12}>
-            <Typography variant="h1" component="h1" gutterBottom>
-              Macy y Brian
+    <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundColor: '#f1efea',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square >
+          <Box
+            sx={{
+              my: 8,
+              mx: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <Typography component="h1" variant="h5">
+             YOU'RE INVITED 
             </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h5" component="h2" gutterBottom>
-              You are invited to our wedding!
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="body1" component="p" gutterBottom>
-              Please enter the password provided to you.
-            </Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <TextField id="password" label="Password" variant="outlined" fullWidth onKeyUpCapture={(e) => {
-              // @ts-ignore -- @todo handle this the right way
-              if (e.target?.value === "woot") {
-                window.location.href = '/details'
-              }
-            }} />
-          </Grid>
-          <Grid item xs={12}>
-            <Copyright />
-          </Grid>
+          </Box>
         </Grid>
-      </Box>
-    </Container>
+      </Grid>
   );
 };
 
-export default Home;
+export default Details;
