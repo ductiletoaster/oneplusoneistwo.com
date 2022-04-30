@@ -54,7 +54,7 @@ const Details: NextPage = () => {
       <Box style={{
         width: "100%",
         height: "400px",
-        backgroundImage: "url(/nature-scape.svg)",
+        backgroundImage: "url(/landscape-1.svg)",
         backgroundPosition: "left bottom",
         backgroundRepeat: "repeat-x",
         backgroundSize: "contain",

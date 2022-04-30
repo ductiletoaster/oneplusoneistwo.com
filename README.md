@@ -2,12 +2,7 @@
 Our Wedding Site!
 
 ## TODOs
-- Optimize for smaller screens
-- Not sure about the bees might do a variant with just some of the gray scale flowers
-- Add bees and some of the border icons placing text in the center 
-- Try both white and off white backgrounds (can make it toggable?) 
-- login screen with a single underlined field, text says you  are invited and some black/gray icons (vectors) -- animation into next screen...
-- maybe even a day and night theme??? sleepy bees and stuff
+- Centerpiece only on larger screens
 
 
 ## References
