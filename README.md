@@ -7,7 +7,10 @@ Our Wedding Site!
 - Code up by name (for plus ones etc)
 - Change language and setup for translations
 - https://nextjs.org/docs/advanced-features/i18n-routing
+- https://dev.to/martinkr/next-js-i18n-with-static-sites-2644
 
+
+- get route based translations
 
 ## References
 - Backgrounds from https://www.transparenttextures.com/

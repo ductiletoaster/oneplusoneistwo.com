@@ -4,7 +4,7 @@ import Box from "@mui/material/Box"
 export default function Flower() {
   return (
     <Box
-      style={{
+      sx={{
         width: "100%",
         height: "400px",
         backgroundImage: "url(/grayscale-flower-1.svg)",

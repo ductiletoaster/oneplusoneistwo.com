@@ -5,8 +5,12 @@ import TextField from "@mui/material/TextField"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Copyright from "../src/Copyright"
+import LanguageMenu from "../src/LanguageMenu"
+import { useTranslation } from "next-export-i18n"
 
 const Home: NextPage = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -33,10 +37,10 @@ const Home: NextPage = () => {
             mb: 4,
           }}
         >
-          You&apos;re Invited
+          {t("You're Invited")}
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          {"We welcome you to join us and come celebrate our wedding!"}
+          {t("We welcome you to join us and come celebrate our wedding!")}
         </Typography>
         <Box
           sx={{
@@ -67,6 +71,9 @@ const Home: NextPage = () => {
           mt: "auto",
         }}
       >
+        <Container maxWidth="sm">
+          <LanguageMenu />
+        </Container>
         <Container maxWidth="sm">
           <Copyright />
         </Container>

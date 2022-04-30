@@ -5,8 +5,11 @@ import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Copyright from "../src/Copyright"
+import { useTranslation } from "next-export-i18n"
 
 const Details: NextPage = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
