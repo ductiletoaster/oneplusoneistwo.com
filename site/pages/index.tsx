@@ -23,19 +23,27 @@ const Home: NextPage = () => {
           mb: 2,
         }} 
         maxWidth="sm">
-        <Typography variant="h1" component="h1" gutterBottom>
+        <Typography variant="h2" component="h1" gutterBottom sx={{
+          textTransform: "uppercase",
+          mb: 4
+        }}>
           You're Invited
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
+          {'We welcome you to join us and come celebrate our wedding!'}
         </Typography>
         <Box sx={{
           py: 2,
           px: 4,
           mb: 4
         }}>
-          <TextField id="password" label="Password" variant="standard" />
+          <TextField id="password" label="Password" variant="standard" onChange={(e) => {
+              // @ts-ignore -- @todo handle this the right way
+              // @todo annimations 
+              if (e.target?.value === "woot") {
+                window.location.href = '/details'
+              }
+            }}/>
         </Box>
         <Typography variant="body1">Macy &amp; Brian</Typography>
         <Typography variant="body2">11.11.2022</Typography>
