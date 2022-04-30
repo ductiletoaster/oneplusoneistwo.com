@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             mb: 4,
           }}
         >
-          You're Invited
+          You&apos;re Invited
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           {"We welcome you to join us and come celebrate our wedding!"}
@@ -50,8 +50,6 @@ const Home: NextPage = () => {
             label="Password"
             variant="standard"
             onChange={(e) => {
-              // @ts-ignore -- @todo handle this the right way
-              // @todo annimations
               if (e.target?.value === "woot") {
                 window.location.href = "/details"
               }
