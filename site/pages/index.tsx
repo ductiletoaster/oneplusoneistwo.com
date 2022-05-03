@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           {t("We're getting married!")}
         </Typography>
         <Typography variant="body1" component="h3" gutterBottom>
-          {t("We welcome you to join us to celebrate our wedding! Please enter your name below for more details.")}
+          {t("We welcome you to join us in celebrating our wedding! Please enter your name below for more details.")}
         </Typography>
         <Box
           sx={{
