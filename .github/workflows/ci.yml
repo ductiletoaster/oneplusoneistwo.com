@@ -23,6 +23,10 @@ jobs:
         working-directory: site
         run: yarn run lint
 
+      - name: Check formatting
+        working-directory: site
+        run: yarn run pretty:check
+
       - name: Building Application
         working-directory: site
         run: yarn run build

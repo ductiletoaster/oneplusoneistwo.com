@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "pretty": "prettier --write ."
+    "pretty": "prettier --write .",
+    "pretty:check": "prettier --write ."
   },
   "dependencies": {
     "@babel/core": "^7.17.10",

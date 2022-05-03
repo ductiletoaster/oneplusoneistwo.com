@@ -4,12 +4,13 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/en/:path*',
-        destination: '/:path*/?lang=en',
-      }, {
-        source: '/es/:path*',
-        destination: '/:path*/?lang=es',
-      }
+        source: "/en/:path*",
+        destination: "/:path*/?lang=en",
+      },
+      {
+        source: "/es/:path*",
+        destination: "/:path*/?lang=es",
+      },
     ]
   },
 }
