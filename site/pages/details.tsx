@@ -59,14 +59,12 @@ const Details: NextPage = () => {
             </Grid>
             <Grid item>
               <Typography variant="h2" component="h1" gutterBottom>
-                THE DETAILS
+                {t('THE DETAILS')}
               </Typography>
             </Grid>
             <Grid item>
               <Typography variant="body1" component="p" gutterBottom>
-                A blocker of rooms has been reserved for your convience at the
-                hotel. Please mention the Gebel-Olivas wedding when making
-                reservations.
+                {t('A block of rooms has been reserved for your convience at the hotel. Please let us know if you are interested in a room so we provide additional details.')}'
               </Typography>
             </Grid>
 

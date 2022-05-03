@@ -1,19 +1,28 @@
 import * as React from "react"
 import Box from "@mui/material/Box"
 
-export default function Flower() {
+interface Props {
+  height?: string,
+  width?: string,
+}
+
+export default function Flower(props: Props) {
+  const {
+    height = "100px",
+    width = "50px"
+  } = props;
   return (
     <Box
       sx={{
-        width: "100%",
-        height: "400px",
+        height,
         backgroundImage: "url(/grayscale-flower-1.svg)",
         backgroundPosition: "left bottom",
-        backgroundRepeat: "repeat-x",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
-        position: "fixed",
-        bottom: "64px",
-        left: 0,
+        marginTop: 4,
+        marginLeft: "auto",
+        marginRight: "auto",
+        width,
       }}
     />
   )

@@ -8,7 +8,7 @@ Our Wedding Site!
 - Change language and setup for translations
 - https://nextjs.org/docs/advanced-features/i18n-routing
 - https://dev.to/martinkr/next-js-i18n-with-static-sites-2644
-
+- follow this https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd
 
 - get route based translations
 
