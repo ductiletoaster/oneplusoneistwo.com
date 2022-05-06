@@ -3,7 +3,7 @@ Our Wedding Site!
 
 ## TODOs
 i18n Better
-- I also like this site and wanna model my own site off this https://soykje.gitlab.io/en/blog/nextjs-i18n/
+- https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd
 
 
 ## References

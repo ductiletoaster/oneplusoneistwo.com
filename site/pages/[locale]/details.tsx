@@ -5,11 +5,8 @@ import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Copyright from "../src/Copyright"
-import { useTranslation } from "next-export-i18n"
 
 const Details: NextPage = () => {
-  const { t } = useTranslation()
-
   return (
     <Box
       sx={{
@@ -59,12 +56,12 @@ const Details: NextPage = () => {
             </Grid>
             <Grid item>
               <Typography variant="h2" component="h1" gutterBottom>
-                {t('THE DETAILS')}
+                THE DETAILS
               </Typography>
             </Grid>
             <Grid item>
               <Typography variant="body1" component="p" gutterBottom>
-                {t('A block of rooms has been reserved for your convience at the hotel. Please let us know if you are interested in a room so we provide additional details.')}'
+                A block of rooms has been reserved for your convience at the hotel. Please let us know if you are interested in a room so we provide additional details.
               </Typography>
             </Grid>
 

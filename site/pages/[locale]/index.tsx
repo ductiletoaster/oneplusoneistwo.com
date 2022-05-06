@@ -4,15 +4,13 @@ import Container from "@mui/material/Container"
 import TextField from "@mui/material/TextField"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import Copyright from "../src/Copyright"
-import Flower from "../src/Flower"
-import LanguageMenu from "../src/LanguageMenu"
+import Copyright from "../../src/Copyright"
+import Flower from "../../src/Flower"
+import LanguageMenu from "../../src/LanguageMenu"
 import { useRouter } from 'next/router'
-import { useTranslation } from "next-export-i18n"
 
 const Home: NextPage = () => {
   const router = useRouter();
-  const { t } = useTranslation();
 
   return (
     <Box
@@ -41,13 +39,13 @@ const Home: NextPage = () => {
             mb: 4,
           }}
         >
-          {t("Guess What?")}
+          Guess What?
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom sx={{mb: 4}}>
-          {t("We're getting married!")}
+          We&apos;re getting married!
         </Typography>
         <Typography variant="body1" component="h3" gutterBottom>
-          {t("We welcome you to join us in celebrating our wedding! Please enter your name below for more details.")}
+          We welcome you to join us in celebrating our wedding! Please enter your name below for more details.
         </Typography>
         <Box
           sx={{
@@ -58,7 +56,7 @@ const Home: NextPage = () => {
         >
           <TextField
             id="name"
-            label={t("Name")}
+            label="Name"
             variant="standard"
             onChange={(e) => {
               const name = e.target?.value;
