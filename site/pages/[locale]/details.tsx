@@ -4,7 +4,9 @@ import Container from "@mui/material/Container"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import Copyright from "../src/Copyright"
+
+import Copyright from "../../src/Copyright"
+import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 
 const Details: NextPage = () => {
   return (
@@ -92,4 +94,10 @@ const Details: NextPage = () => {
   )
 }
 
+const getStaticProps = makeStaticProps(['common'])
+
 export default Details
+export { 
+  getStaticPaths, 
+  getStaticProps
+}

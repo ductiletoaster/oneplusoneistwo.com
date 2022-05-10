@@ -1,13 +1,15 @@
 import * as React from "react"
 import type { NextPage } from "next"
+import { useRouter } from 'next/router'
 import Container from "@mui/material/Container"
 import TextField from "@mui/material/TextField"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
+
 import Copyright from "../../src/Copyright"
 import Flower from "../../src/Flower"
 import LanguageMenu from "../../src/LanguageMenu"
-import { useRouter } from 'next/router'
+import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -93,4 +95,10 @@ const Home: NextPage = () => {
   )
 }
 
+const getStaticProps = makeStaticProps(['common'])
+
 export default Home
+export { 
+  getStaticPaths, 
+  getStaticProps
+}

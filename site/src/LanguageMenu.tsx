@@ -18,6 +18,7 @@ export default function LanguageMenu() {
     >
       {supportedLanguages.map((lang, index) => (
           <Tab
+            key={index}
             id={`simple-tab-${index}`}
             label={lang}
             value={index}
