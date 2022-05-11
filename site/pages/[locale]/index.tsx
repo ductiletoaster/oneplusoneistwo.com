@@ -1,18 +1,20 @@
 import * as React from "react"
 import type { NextPage } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import Container from "@mui/material/Container"
 import TextField from "@mui/material/TextField"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import Copyright from "../src/Copyright"
-import Flower from "../src/Flower"
-import LanguageMenu from "../src/LanguageMenu"
-import { useRouter } from 'next/router'
-import { useTranslation } from "next-export-i18n"
+
+import Copyright from "../../src/Copyright"
+import Flower from "../../src/Flower"
+import LanguageMenu from "../../src/LanguageMenu"
+import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 
 const Home: NextPage = () => {
-  const router = useRouter();
-  const { t } = useTranslation();
+  const router = useRouter()
+  const { t } = useTranslation("common")
 
   return (
     <Box
@@ -41,13 +43,14 @@ const Home: NextPage = () => {
             mb: 4,
           }}
         >
-          {t("Guess What?")}
+          Guess What?
         </Typography>
-        <Typography variant="h5" component="h2" gutterBottom sx={{mb: 4}}>
-          {t("We're getting married!")}
+        <Typography variant="h5" component="h2" gutterBottom sx={{ mb: 4 }}>
+          {t(`We're getting married!`)}
         </Typography>
         <Typography variant="body1" component="h3" gutterBottom>
-          {t("We welcome you to join us in celebrating our wedding! Please enter your name below for more details.")}
+          We welcome you to join us in celebrating our wedding! Please enter
+          your name below for more details.
         </Typography>
         <Box
           sx={{
@@ -58,22 +61,18 @@ const Home: NextPage = () => {
         >
           <TextField
             id="name"
-            label={t("Name")}
+            label="Name"
             variant="standard"
             onChange={(e) => {
-              const name = e.target?.value;
+              const name = e.target?.value
               if (name === "brian") {
                 router.push({ pathname: "/details", query: { name } })
               }
             }}
           />
         </Box>
-        <Typography variant="body1">
-          Macy &amp; Brian
-        </Typography>
-        <Typography variant="body2">
-          11.11.2022
-        </Typography>
+        <Typography variant="body1">Macy &amp; Brian</Typography>
+        <Typography variant="body2">11.11.2022</Typography>
         <Flower />
       </Container>
       <Box
@@ -95,4 +94,7 @@ const Home: NextPage = () => {
   )
 }
 
+const getStaticProps = makeStaticProps(["common"])
+
 export default Home
+export { getStaticPaths, getStaticProps }
