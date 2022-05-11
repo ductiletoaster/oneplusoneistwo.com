@@ -6,18 +6,19 @@ const nextConfig = {
   reactStrictMode: true,
   // @todo re-enable for serveri side rendering
   // i18n,
-  async rewrites() {
-    return [
-      {
-        source: "/en/:path*",
-        destination: "/:path*/?lang=en",
-      },
-      {
-        source: "/es/:path*",
-        destination: "/:path*/?lang=es",
-      },
-    ]
-  },
+  // @todo Possible conflict with other redirets
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/en/:path*",
+  //       destination: "/:path*/?lang=en",
+  //     },
+  //     {
+  //       source: "/es/:path*",
+  //       destination: "/:path*/?lang=es",
+  //     },
+  //   ]
+  // },
 }
 
 module.exports = nextConfig
