@@ -6,7 +6,7 @@ const supportedLanguages = ["en", "es"]
 const defaultLanguage = "en"
 
 export default function LanguageMenu() {
-  const selectedLanguage = defaultLanguage;
+  const selectedLanguage = defaultLanguage
   return (
     <Tabs
       value={supportedLanguages.indexOf(selectedLanguage)}
@@ -17,13 +17,13 @@ export default function LanguageMenu() {
       centered
     >
       {supportedLanguages.map((lang, index) => (
-          <Tab
-            key={index}
-            id={`simple-tab-${index}`}
-            label={lang}
-            value={index}
-            aria-controls={`simple-tabpanel-${index}`}
-          />
+        <Tab
+          key={index}
+          id={`simple-tab-${index}`}
+          label={lang}
+          value={index}
+          aria-controls={`simple-tabpanel-${index}`}
+        />
       ))}
     </Tabs>
   )

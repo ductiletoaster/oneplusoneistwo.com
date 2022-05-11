@@ -2,15 +2,12 @@ import * as React from "react"
 import Box from "@mui/material/Box"
 
 interface Props {
-  height?: string,
-  width?: string,
+  height?: string
+  width?: string
 }
 
 export default function Flower(props: Props) {
-  const {
-    height = "100px",
-    width = "50px"
-  } = props;
+  const { height = "100px", width = "50px" } = props
   return (
     <Box
       sx={{

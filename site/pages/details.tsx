@@ -1,2 +1,2 @@
-import Redirect from '../src/Redirect'
+import Redirect from "../src/Redirect"
 export default Redirect

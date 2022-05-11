@@ -1,31 +1,32 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useEffect } from "react"
+import { useRouter } from "next/router"
 
-import languageDetector from 'next-language-detector'
-import i18nextConfig from '../next-i18next.config'
+import languageDetector from "next-language-detector"
+import i18nextConfig from "../next-i18next.config"
 
 export function useRedirect(to?: string) {
   const router = useRouter()
   const detect = languageDetector({
     supportedLngs: i18nextConfig.i18n.locales,
-    fallbackLng: i18nextConfig.i18n.defaultLocale
-  });
+    fallbackLng: i18nextConfig.i18n.defaultLocale,
+  })
   const toPath = to || router.asPath
 
   // language detection
+  // @todo make /en the default without redirect
   useEffect(() => {
-    const detectedLng = detect.detect() ?? '';
+    const detectedLng = detect.detect() ?? ""
     if (detect?.cache) {
-      detect.cache(detectedLng);
+      detect.cache(detectedLng)
     }
-    let redirectPath = detectedLng ? `/${detectedLng}${toPath}` : toPath;
-    if (toPath.startsWith(`/${detectedLng}`) && router.route === '/404') { // prevent endless loop
-      redirectPath = `/${detectedLng}${router.route}`;
+    let redirectPath = detectedLng ? `/${detectedLng}${toPath}` : toPath
+    if (toPath.startsWith(`/${detectedLng}`) && router.route === "/404") {
+      // prevent endless loop
+      redirectPath = `/${detectedLng}${router.route}`
     }
-    console.log(`Detected Language: ${detectedLng}`);
-    console.log(`Requested Path: ${toPath}`);
-    console.log(`Redirect Path: ${redirectPath}`);
+    console.log(`Detected Language: ${detectedLng}`)
+    console.log(`Requested Path: ${toPath}`)
+    console.log(`Redirect Path: ${redirectPath}`)
     router.replace(redirectPath)
   })
-};
-
+}

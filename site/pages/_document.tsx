@@ -1,18 +1,23 @@
 import * as React from "react"
-import Document, { DocumentProps, Html, Head, Main, NextScript } from "next/document"
+import Document, {
+  DocumentProps,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "next/document"
 import createEmotionServer from "@emotion/server/create-instance"
 import theme from "../src/theme"
 import createEmotionCache from "../src/createEmotionCache"
-import i18nextConfig from '../next-i18next.config'
-
+import i18nextConfig from "../next-i18next.config"
 
 interface MyDocumentProps extends DocumentProps {
-  emotionStyleTags: React.ReactNode[];
-  locale: string;
+  emotionStyleTags: React.ReactNode[]
+  locale: string
 }
 export default class MyDocument extends Document<MyDocumentProps> {
   render() {
-    const {emotionStyleTags, locale} = this.props;
+    const { emotionStyleTags, locale } = this.props
     return (
       <Html lang={locale}>
         <Head>
@@ -89,10 +94,12 @@ MyDocument.getInitialProps = async (ctx) => {
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
   ))
-  const locale = Array.isArray(ctx.query?.locale) ? ctx.query.locale[0] : ctx.query?.locale || i18nextConfig.i18n.defaultLocale
+  const locale = Array.isArray(ctx.query?.locale)
+    ? ctx.query.locale[0]
+    : ctx.query?.locale || i18nextConfig.i18n.defaultLocale
   return {
     ...initialProps,
     emotionStyleTags,
-    locale
+    locale,
   }
 }

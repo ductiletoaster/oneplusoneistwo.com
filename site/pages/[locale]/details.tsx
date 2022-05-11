@@ -63,7 +63,9 @@ const Details: NextPage = () => {
             </Grid>
             <Grid item>
               <Typography variant="body1" component="p" gutterBottom>
-                A block of rooms has been reserved for your convience at the hotel. Please let us know if you are interested in a room so we provide additional details.
+                A block of rooms has been reserved for your convience at the
+                hotel. Please let us know if you are interested in a room so we
+                provide additional details.
               </Typography>
             </Grid>
 
@@ -94,10 +96,7 @@ const Details: NextPage = () => {
   )
 }
 
-const getStaticProps = makeStaticProps(['common'])
+const getStaticProps = makeStaticProps(["common"])
 
 export default Details
-export { 
-  getStaticPaths, 
-  getStaticProps
-}
+export { getStaticPaths, getStaticProps }
