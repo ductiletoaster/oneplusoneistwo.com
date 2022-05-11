@@ -6,7 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   // @todo re-enable for serveri side rendering
   // i18n,
-  // @todo Possible conflict with other redirets
+  // @todo Can this replace the comonent method?
   // async rewrites() {
   //   return [
   //     {

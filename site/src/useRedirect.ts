@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import languageDetector from 'next-language-detector'
 import i18nextConfig from '../next-i18next.config'
 
-
 export function useRedirect(to?: string) {
   const router = useRouter()
   const detect = languageDetector({
