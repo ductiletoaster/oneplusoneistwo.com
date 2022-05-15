@@ -38,16 +38,20 @@ const Home: NextPage = () => {
           component="h1"
           gutterBottom
           sx={{
-            fontSize: "4.50rem",
             fontStyle: "italic",
             mb: 4,
           }}
         >
-          Guess What?
+           Brian &amp; Macy
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom sx={{ mb: 4 }}>
           {t(`We're getting married!`)}
         </Typography>
+        <Box sx={{
+            mb: 4,
+          }}>
+          <Flower height="150px" width="75px" />
+        </Box>
         <Typography variant="body1" component="h3" gutterBottom>
           We welcome you to join us in celebrating our wedding! Please enter
           your name below for more details.
@@ -71,9 +75,7 @@ const Home: NextPage = () => {
             }}
           />
         </Box>
-        <Typography variant="body1">Macy &amp; Brian</Typography>
-        <Typography variant="body2">11.11.2022</Typography>
-        <Flower />
+
       </Container>
       <Box
         component="footer"
