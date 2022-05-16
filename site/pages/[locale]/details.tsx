@@ -123,7 +123,7 @@ const Details: NextPage = () => {
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
                 Your attendance is all we hope and wish for on our special day.
-                We've provided a registry for convenience.
+                We&apos;ve provided a registry for convenience.
               </Typography>
               <Button
                 variant="outlined"
