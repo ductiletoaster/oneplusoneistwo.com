@@ -42,14 +42,16 @@ const Home: NextPage = () => {
             mb: 4,
           }}
         >
-           Brian &amp; Macy
+          Brian &amp; Macy
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom sx={{ mb: 4 }}>
           {t(`We're getting married!`)}
         </Typography>
-        <Box sx={{
+        <Box
+          sx={{
             mb: 4,
-          }}>
+          }}
+        >
           <Flower height="150px" width="75px" />
         </Box>
         <Typography variant="body1" component="h3" gutterBottom>
@@ -75,7 +77,6 @@ const Home: NextPage = () => {
             }}
           />
         </Box>
-
       </Container>
       <Box
         component="footer"
