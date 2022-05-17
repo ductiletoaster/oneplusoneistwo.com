@@ -13,7 +13,6 @@ export default function LanguageMenu() {
     ? router.query.locale[0]
     : router.query?.locale || defaultLanguage
 
-  console.log(router)
   return (
     <Tabs
       value={supportedLanguages.indexOf(selectedLanguage)}

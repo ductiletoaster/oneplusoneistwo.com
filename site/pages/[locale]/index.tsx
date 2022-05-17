@@ -55,8 +55,8 @@ const Home: NextPage = () => {
           <Flower height="150px" width="75px" />
         </Box>
         <Typography variant="body1" component="h3" gutterBottom>
-          We welcome you to join us in celebrating our wedding! Please enter
-          your name below for more details.
+          {t(`We welcome you to join us in celebrating our wedding! Please enter
+          your name below for more details.`)}
         </Typography>
         <Box
           sx={{
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
         >
           <TextField
             id="name"
-            label="Name"
+            label={t(`Name`)}
             variant="standard"
             onChange={(e) => {
               const name = e.target?.value
