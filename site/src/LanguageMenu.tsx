@@ -8,13 +8,12 @@ const supportedLanguages = ["en", "es"]
 const defaultLanguage = "en"
 
 export default function LanguageMenu() {
-  const router = useRouter();
+  const router = useRouter()
   const selectedLanguage = Array.isArray(router.query?.locale)
-  ? router.query.locale[0]
-  : router.query?.locale 
-  || defaultLanguage
-  
-  console.log(router);
+    ? router.query.locale[0]
+    : router.query?.locale || defaultLanguage
+
+  console.log(router)
   return (
     <Tabs
       value={supportedLanguages.indexOf(selectedLanguage)}
@@ -26,13 +25,13 @@ export default function LanguageMenu() {
     >
       {supportedLanguages.map((lang, index) => (
         <Button href={`/${lang}`}>
-        <Tab
-          key={index}
-          id={`simple-tab-${index}`}
-          label={lang}
-          value={index}
-          aria-controls={`simple-tabpanel-${index}`}
-        />
+          <Tab
+            key={index}
+            id={`simple-tab-${index}`}
+            label={lang}
+            value={index}
+            aria-controls={`simple-tabpanel-${index}`}
+          />
         </Button>
       ))}
     </Tabs>
