@@ -24,9 +24,6 @@ export function useRedirect(to?: string) {
       // prevent endless loop
       redirectPath = `/${detectedLng}${router.route}`
     }
-    console.log(`Detected Language: ${detectedLng}`)
-    console.log(`Requested Path: ${toPath}`)
-    console.log(`Redirect Path: ${redirectPath}`)
     router.replace(redirectPath)
   })
 }
