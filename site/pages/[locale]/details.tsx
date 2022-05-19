@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { NextPage } from "next"
+import { useTranslation } from "next-i18next"
 import Container from "@mui/material/Container"
 import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid"
@@ -7,11 +8,12 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Chip from "@mui/material/Chip"
 import Button from "@mui/material/Button"
-
 import Copyright from "../../src/Copyright"
 import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 
 const Details: NextPage = () => {
+  const { t } = useTranslation("common")
+
   return (
     <Box
       sx={{
@@ -61,17 +63,16 @@ const Details: NextPage = () => {
             </Grid>
             <Grid item sx={{ m: 2 }}>
               <Typography variant="h2" component="h1" gutterBottom>
-                THE DETAILS
+                {t("THE DETAILS")}
               </Typography>
             </Grid>
 
             <Grid item sx={{ mb: 2 }}>
               <Typography variant="h5" component="h5" gutterBottom>
-                Ceremony and Reception
+                {t("Ceremony and Reception")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
-                The ceremony will be held in the courtyard while cocktails,
-                dinner and entertainment will be held in the beautiful garden.
+                {t("The ceremony will be held in the courtyard while cocktails, dinner and entertainment will be held in the beautiful garden.")}
               </Typography>
               <br />
               <Typography variant="body1" component="p" gutterBottom>
