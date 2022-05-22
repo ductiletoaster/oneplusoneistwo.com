@@ -68,11 +68,11 @@ const Home: NextPage = () => {
         >
           <TextField
             id="name"
-            label={t(`Name`)}
+            label={t(`Password`)}
             variant="standard"
             onChange={(e) => {
               const name = e.target?.value
-              if (name === "brian") {
+              if (name.toLowerCase() === "olivas-gebel") {
                 router.push({ pathname: "/details", query: { name } })
               }
             }}
