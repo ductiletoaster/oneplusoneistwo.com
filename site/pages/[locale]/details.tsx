@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { NextPage } from "next"
-import { useTranslation } from "next-i18next"
+import { useTranslation, Trans } from "next-i18next"
 import Container from "@mui/material/Container"
 import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid"
@@ -53,12 +53,14 @@ const Details: NextPage = () => {
                 gutterBottom
                 sx={{ fontStyle: "italic" }}
               >
-                Together with their families,
-                <br />
-                Macy Olivas and Brian Gebel request your presence on their
-                wedding day Friday the eleventh of November two thousand and
-                twenty two at <br />
-                The Guild Hotel in San Diego.
+                <Trans t={t} i18nKey="detailsHeader">
+                  Together with their families,
+                  <br />
+                  Macy Olivas and Brian Gebel request your presence on their
+                  wedding day Friday the eleventh of November two thousand and
+                  twenty two at <br />
+                  The Guild Hotel in San Diego.
+                </Trans>
               </Typography>
             </Grid>
             <Grid item sx={{ m: 2 }}>
@@ -76,7 +78,7 @@ const Details: NextPage = () => {
               </Typography>
               <br />
               <Typography variant="body1" component="p" gutterBottom>
-                Friday, November 11th, 2022 2:00pm
+              {t("Friday, November 11th, 2022 2:00pm")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
                 500 W Broadway, San Diego, CA 92101
@@ -87,18 +89,16 @@ const Details: NextPage = () => {
                 href="https://g.page/theguildhotel?share"
                 target="_blank"
               >
-                View Map
+                {t("View Map")}
               </Button>
             </Grid>
 
             <Grid item sx={{ m: 2 }}>
               <Typography variant="h5" component="h5" gutterBottom>
-                Accomodations
+                {t("Accomodations")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
-                A limited number of rooms has been reserved at the venue for
-                your convience at the The Guild. Please let us know if you are
-                interested in a room so we provide additional details.
+                {t("A limited number of rooms has been reserved at the venue for your convience at the The Guild. Please let us know if you are interested in a room so we provide additional details.")}
               </Typography>
               <Button
                 variant="outlined"
@@ -106,7 +106,7 @@ const Details: NextPage = () => {
                 target="_blank"
                 sx={{ m: 1 }}
               >
-                Airbnb
+                {t("Airbnb")}
               </Button>
               <Button
                 variant="outlined"
@@ -114,17 +114,16 @@ const Details: NextPage = () => {
                 target="_blank"
                 sx={{ m: 1 }}
               >
-                Hotels
+                {t("Hotels")}
               </Button>
             </Grid>
 
             <Grid item sx={{ m: 2 }}>
               <Typography variant="h5" component="h5" gutterBottom>
-                Registry
+                {t("Registry")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
-                Your attendance is all we hope and wish for on our special day.
-                We&apos;ve provided a registry for convenience.
+                {t("Your attendance is all we hope and wish for on our special day. We've provided a registry for convenience.")}
               </Typography>
               <Button
                 variant="outlined"
@@ -132,7 +131,7 @@ const Details: NextPage = () => {
                 target="_blank"
                 sx={{ m: 1 }}
               >
-                Gifts
+                {t("Gifts")}
               </Button>
               <Button
                 variant="outlined"
@@ -140,7 +139,7 @@ const Details: NextPage = () => {
                 target="_blank"
                 sx={{ m: 1 }}
               >
-                Experiances
+                {t("Experiances")}
               </Button>
             </Grid>
 

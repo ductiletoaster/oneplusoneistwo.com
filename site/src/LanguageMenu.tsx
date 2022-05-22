@@ -2,6 +2,7 @@ import * as React from "react"
 import Button from "@mui/material/Button"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
+import Link from "./Link"
 import { useRouter } from "next/router"
 
 const supportedLanguages = ["en", "es"]
@@ -23,15 +24,14 @@ export default function LanguageMenu() {
       centered
     >
       {supportedLanguages.map((lang, index) => (
-        <Button href={`/${lang}`}>
           <Tab
             key={index}
             id={`simple-tab-${index}`}
+            href={`/${lang}`}
             label={lang}
             value={index}
             aria-controls={`simple-tabpanel-${index}`}
           />
-        </Button>
       ))}
     </Tabs>
   )
