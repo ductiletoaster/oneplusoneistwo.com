@@ -10,10 +10,20 @@ import Chip from "@mui/material/Chip"
 import Button from "@mui/material/Button"
 import Copyright from "../../src/Copyright"
 import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
+import useLocale from "../../src/useLocale"
 
 const Details: NextPage = () => {
-  const { t } = useTranslation("common")
-
+  const { t } = useTranslation("common");
+  const locale = useLocale();  
+  const date = new Date(Date.UTC(2022, 10, 11, 14, 0, 0));
+  const localizedDateString = date.toLocaleDateString(locale, {
+    timeZone: "UTC",
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric', 
+    hour: 'numeric'
+  });
   return (
     <Box
       sx={{
@@ -78,7 +88,7 @@ const Details: NextPage = () => {
               </Typography>
               <br />
               <Typography variant="body1" component="p" gutterBottom>
-              {t("Friday, November 11th, 2022 2:00pm")}
+                {localizedDateString}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
                 500 W Broadway, San Diego, CA 92101
