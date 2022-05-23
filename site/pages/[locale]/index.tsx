@@ -11,10 +11,12 @@ import Copyright from "../../src/Copyright"
 import Flower from "../../src/Flower"
 import LanguageMenu from "../../src/LanguageMenu"
 import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
+import useLocale from "../../src/useLocale"
 
 const Home: NextPage = () => {
-  const router = useRouter()
-  const { t } = useTranslation("common")
+  const locale = useLocale();
+  const router = useRouter();
+  const { t } = useTranslation("common");''
 
   return (
     <Box
@@ -73,7 +75,7 @@ const Home: NextPage = () => {
             onChange={(e) => {
               const name = e.target?.value
               if (name.toLowerCase() === "olivas-gebel") {
-                router.push({ pathname: "/details", query: { name } })
+                router.push({ pathname: `/${locale}/details`})
               }
             }}
           />

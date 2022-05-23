@@ -2,8 +2,6 @@
 Our Wedding Site!
 
 ## TODOs
-- Fix Language Picker
-- Make it so the site responds with whether they have a +1 or not
 - Review RSVP form
 - Fill out Registry
 
