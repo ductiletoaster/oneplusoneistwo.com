@@ -10,9 +10,11 @@ import Chip from "@mui/material/Chip"
 import Button from "@mui/material/Button"
 import Copyright from "../../src/Copyright"
 import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
+import useLocale from "../../src/useLocale"
 
 const Details: NextPage = () => {
   const { t } = useTranslation("common");
+  const locale = useLocale();
   return (
     <Box
       sx={{
@@ -152,7 +154,7 @@ const Details: NextPage = () => {
               <Button
                 variant="outlined"
                 size="large"
-                href="https://forms.gle/zogNedjTthaUkjd26"
+                href={locale === "es" ? "https://forms.gle/YURVp9iqotmLRHMS7" : "https://forms.gle/zogNedjTthaUkjd26"}
                 target="_blank"
                 sx={{ mt: 3, mb: 1, p: 1, width: "200px" }}
               >
