@@ -97,7 +97,7 @@ const Details: NextPage = () => {
                 {t("Accomodations")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
-                {t("A limited number of rooms has been reserved at the venue for your convience at the The Guild. Please let us know if you are interested in a room so we provide additional details.")}
+                {t("A limited number of rooms has been reserved at the venue for your convenience at The Guild. Please let us know if you are interested in a room so we provide additional details.")}
               </Typography>
               <Button
                 variant="outlined"
