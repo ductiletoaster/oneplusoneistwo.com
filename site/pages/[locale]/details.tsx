@@ -13,7 +13,7 @@ import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 import useLocale from "../../src/useLocale"
 
 const Details: NextPage = () => {
-  const { t } = useTranslation("details");
+  const { t } = useTranslation("common");
   const locale = useLocale();
   return (
     <Box
@@ -182,7 +182,7 @@ const Details: NextPage = () => {
   )
 }
 
-const getStaticProps = makeStaticProps(["details"])
+const getStaticProps = makeStaticProps(["common"])
 
 export default Details
 export { getStaticPaths, getStaticProps }

@@ -73,8 +73,9 @@ const Home: NextPage = () => {
             label={t(`Password`)}
             variant="standard"
             onChange={(e) => {
+              const passwords = ["olivas-gebel", "olivasgebel", "olivas gebel"];
               const name = e.target?.value
-              if (name.toLowerCase() === "olivas-gebel") {
+              if (passwords.includes(name.toLowerCase())) {
                 router.push({ pathname: `/${locale}/details`})
               }
             }}
