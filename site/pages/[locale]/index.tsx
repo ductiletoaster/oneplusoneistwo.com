@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         </Box>
         <Typography variant="body1" component="h3" gutterBottom>
           {t(
-            `We welcome you to join us in celebrating our wedding! Please enter the top secret password below for more details.`
+            `We welcome you to join us in celebrating our wedding! Please enter the provided password in the field below for more details.`
           )}
         </Typography>
         <Box
