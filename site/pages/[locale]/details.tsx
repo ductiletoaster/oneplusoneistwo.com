@@ -13,7 +13,7 @@ import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
 import useLocale from "../../src/useLocale"
 
 const Details: NextPage = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("details");
   const locale = useLocale();
   return (
     <Box

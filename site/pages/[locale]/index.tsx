@@ -16,7 +16,7 @@ import useLocale from "../../src/useLocale"
 const Home: NextPage = () => {
   const locale = useLocale();
   const router = useRouter();
-  const { t } = useTranslation("common");''
+  const { t } = useTranslation("home");
 
   return (
     <Box
