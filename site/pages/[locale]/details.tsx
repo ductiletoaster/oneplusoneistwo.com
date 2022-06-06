@@ -182,7 +182,7 @@ const Details: NextPage = () => {
   )
 }
 
-const getStaticProps = makeStaticProps(["common"])
+const getStaticProps = makeStaticProps(["details"])
 
 export default Details
 export { getStaticPaths, getStaticProps }

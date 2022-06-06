@@ -100,7 +100,7 @@ const Home: NextPage = () => {
   )
 }
 
-const getStaticProps = makeStaticProps(["common"])
+const getStaticProps = makeStaticProps(["home"])
 
 export default Home
 export { getStaticPaths, getStaticProps }
