@@ -1,7 +1,4 @@
 {
-  "Password": "Password",
-  "We're getting married!": "We're getting married!",
-  "We welcome you to join us in celebrating our wedding! Please enter your name below for more details.": "We welcome you to join us in celebrating our wedding! Please enter your name below for more details.",
   "detailsHeader": "Together with their families, <br /> Macy Olivas and Brian Gebel request your presence on their wedding day Friday the eleventh of November two thousand and twenty two at <br />The Guild Hotel in San Diego.",
   "THE DETAILS" : "THE DETAILS",
   "Ceremony and Reception": "Ceremony and Reception",
@@ -9,7 +6,9 @@
   "Friday, November 11th, 2022 at 2 PM": "Friday, November 11th, 2022 at 2 PM",
   "View Map": "View Map",
   "Accomodations": "Accomodations",
-  "A limited number of rooms has been reserved at the venue for your convenience at The Guild. Please let us know if you are interested in a room so we provide additional details.": "A limited number of rooms has been reserved at the venue for your convenience at The Guild. Please let us know if you are interested in a room so we provide additional details.",
+  "A limited number of rooms has been reserved at the venue for your convenience. Please let us know if you are interested in a room so we can provide additional details.": "A limited number of rooms has been reserved at the venue for your convenience. Please let us know if you are interested in a room so we provide additional details.",
+  "The Guild Hotel": "The Guild Hotel",
+  "Below are links to accomodations near the venue.": "Below are links to accomodations near the venue.",
   "Airbnb": "Airbnb",
   "Hotels": "Hotels",
   "Registry": "Registry",

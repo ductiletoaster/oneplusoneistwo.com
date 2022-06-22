@@ -8,11 +8,14 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Chip from "@mui/material/Chip"
 import Button from "@mui/material/Button"
+import MuiLink from "@mui/material/Link"
 import Copyright from "../../src/Copyright"
 import { getStaticPaths, makeStaticProps } from "../../src/getStatic"
+import useLocale from "../../src/useLocale"
 
 const Details: NextPage = () => {
   const { t } = useTranslation("common");
+  const locale = useLocale();
   return (
     <Box
       sx={{
@@ -91,13 +94,23 @@ const Details: NextPage = () => {
                 {t("View Map")}
               </Button>
             </Grid>
-
             <Grid item sx={{ m: 2 }}>
               <Typography variant="h5" component="h5" gutterBottom>
                 {t("Accomodations")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
-                {t("A limited number of rooms has been reserved at the venue for your convenience at The Guild. Please let us know if you are interested in a room so we provide additional details.")}
+                {t("A limited number of rooms has been reserved at the venue for your convenience. Please let us know if you are interested in a room so we can provide additional details.")}
+              </Typography>
+              <Button
+                variant="outlined"
+                href="https://www.theguildhotel.com/"
+                target="_blank"
+                sx={{ m: 1 }}
+              >
+                {t("The Guild Hotel")}
+              </Button>
+              <Typography variant="body1" component="p" gutterBottom sx={{ m: 2 }}>
+                {t("Below are links to accomodations near the venue.")}
               </Typography>
               <Button
                 variant="outlined"
@@ -116,7 +129,6 @@ const Details: NextPage = () => {
                 {t("Hotels")}
               </Button>
             </Grid>
-
             <Grid item sx={{ m: 2 }}>
               <Typography variant="h5" component="h5" gutterBottom>
                 {t("Registry")}
@@ -152,7 +164,7 @@ const Details: NextPage = () => {
               <Button
                 variant="outlined"
                 size="large"
-                href="https://forms.gle/zogNedjTthaUkjd26"
+                href={locale === "es" ? "https://forms.gle/YURVp9iqotmLRHMS7" : "https://forms.gle/zogNedjTthaUkjd26"}
                 target="_blank"
                 sx={{ mt: 3, mb: 1, p: 1, width: "200px" }}
               >

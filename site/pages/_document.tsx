@@ -22,6 +22,7 @@ export default class MyDocument extends Document<MyDocumentProps> {
       <Html lang={locale}>
         <Head>
           {/* PWA primary color */}
+          <meta property="og:image" content="/static/grayscale-flower-1.svg" />
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

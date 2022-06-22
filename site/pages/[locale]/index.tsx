@@ -16,7 +16,7 @@ import useLocale from "../../src/useLocale"
 const Home: NextPage = () => {
   const locale = useLocale();
   const router = useRouter();
-  const { t } = useTranslation("common");''
+  const { t } = useTranslation("home");
 
   return (
     <Box
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         </Box>
         <Typography variant="body1" component="h3" gutterBottom>
           {t(
-            `We welcome you to join us in celebrating our wedding! Please enter your name below for more details.`
+            `We welcome you to join us in celebrating our wedding!`
           )}
         </Typography>
         <Box
@@ -73,8 +73,9 @@ const Home: NextPage = () => {
             label={t(`Password`)}
             variant="standard"
             onChange={(e) => {
+              const passwords = ["olivas-gebel", "olivasgebel", "olivas gebel"];
               const name = e.target?.value
-              if (name.toLowerCase() === "olivas-gebel") {
+              if (passwords.includes(name.toLowerCase())) {
                 router.push({ pathname: `/${locale}/details`})
               }
             }}
@@ -100,7 +101,7 @@ const Home: NextPage = () => {
   )
 }
 
-const getStaticProps = makeStaticProps(["common"])
+const getStaticProps = makeStaticProps(["home"])
 
 export default Home
 export { getStaticPaths, getStaticProps }
