@@ -138,7 +138,7 @@ const Details: NextPage = () => {
                 target="_blank"
                 sx={{ m: 1 }}
               >
-                {t("Experiances")}
+                {t("Experiences")}
               </Button>
             </Grid>
 
