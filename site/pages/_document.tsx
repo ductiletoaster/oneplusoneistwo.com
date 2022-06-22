@@ -22,7 +22,21 @@ export default class MyDocument extends Document<MyDocumentProps> {
       <Html lang={locale}>
         <Head>
           {/* PWA primary color */}
+          <meta name="description" content="" />
+
+          <meta property="og:url" content="https://oneplusoneistwo.com/" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="" />
+          <meta property="og:description" content="" />
           <meta property="og:image" content="/static/grayscale-flower-1.svg" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="" />
+          <meta property="twitter:url" content="https://oneplusoneistwo.com/" />
+          <meta name="twitter:title" content="" />
+          <meta name="twitter:description" content="" />
+          <meta name="twitter:image" content="/static/grayscale-flower-1.svg" />
+          
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
