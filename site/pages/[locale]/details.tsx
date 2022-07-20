@@ -80,7 +80,7 @@ const Details: NextPage = () => {
               </Typography>
               <br />
               <Typography variant="body1" component="p" gutterBottom>
-                {t("Friday, November 11th, 2022 at 2 PM")}
+                {t("Friday, November 11th, 2022 at 2:30 PM")}
               </Typography>
               <Typography variant="body1" component="p" gutterBottom>
                 500 W Broadway, San Diego, CA 92101
